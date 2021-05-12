@@ -2,7 +2,7 @@ USE equimpment_siganals_accouting;
 
 /*ПРОЦЕДУРА УДАЛЕНИЯ СВИТЧА. УСТАНОВКА ДАТЫ В ПОЛЕ DATE_DELETE НЕВОЗМОЖНА, ПОКА НЕ УДАЛЕНЫ СВЯЗИ В ТАБЛИЦЕ PORTS.
   ДЛЯ ЭТОГО С ПОМОЩЬЮ ФУНКЦИИ SUM ПРОВЕРЯЕМ ЕСТЬ ЛИ ЗАПИСИ В СООТВЕТСТВУЮЩИХ ПОЛЯХ. ЕСЛИ ВЕРНЕТСЯ ЗНАЧЕНИЕ NULL,
-  ТО ТОГДА ПРОCТАВЛЯЕМ ДАТУ УДАЛЕНИЯ*/
+  ТО ТОГДА ПРОТАВЛЯЕМ ДАТУ УДАЛЕНИЯ*/
 DROP PROCEDURE IF EXISTS pd_switch_delete;
 DELIMITER $$
 CREATE PROCEDURE pd_switch_delete(deleting_id INT)
@@ -38,7 +38,7 @@ WHERE s.id = 22;
 
 /*ПРОЦЕДУРА УДАЛЕНИЯ СТАНЦИИ. УСТАНОВКА ДАТЫ В ПОЛЕ DATE_DELETE НЕВОЗМОЖНА, ПОКА НЕ УДАЛЕНЫ СВЯЗИ В ТАБЛИЦЕ MODULES И PORTS.
   ДЛЯ ЭТОГО С ПОМОЩЬЮ ФУНКЦИИ SUM ПРОВЕРЯЕМ ЕСТЬ ЛИ ЗАПИСИ В СООТВЕТСТВУЮЩИХ ПОЛЯХ. ЕСЛИ ВЕРНЕТСЯ ЗНАЧЕНИЕ NULL,
-  ТО ТОГДА ПРОCТАВЛЯЕМ ДАТУ УДАЛЕНИЯ*/
+  ТО ТОГДА ПРОТАВЛЯЕМ ДАТУ УДАЛЕНИЯ*/
 DROP PROCEDURE IF EXISTS pd_station_delete;
 DELIMITER $$
 CREATE PROCEDURE pd_station_delete(deleting_id INT)
